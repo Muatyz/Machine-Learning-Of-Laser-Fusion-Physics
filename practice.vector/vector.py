@@ -37,7 +37,7 @@ def outlier_test(data,column,method=None,z=2):
         return outlier,upper,lower
 
 #读取文件
-df=pd.read_csv('house_prices.csv')
+df=pd.read_csv('practice.vector/house_prices.csv')
 df.info()#显示列名，数据类型
 df.head(6)#显示前6行（默认5行）
 

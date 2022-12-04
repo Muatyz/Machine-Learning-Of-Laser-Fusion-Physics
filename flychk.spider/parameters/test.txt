@@ -1,0 +1,8 @@
+z 6
+outfile outfile.dat
+evolve ss
+initial ss
+history grid ne
+ne 3e21 6e21 2
+te 1200 1800 100
+end

@@ -81,11 +81,16 @@ def rotate(image,angle,center=None,scale=1.0):
 
 #执行旋转操作并且给出对应的图像
 #猜测旋转角度
-angle_guess=0.6#这个值是针对于碳参考平面图而言的，之后的涉及大量的图像处理还是要用到旋转角度识别算法
+angle_guess=0.55#这个值是针对于碳参考平面图而言的，之后的涉及大量的图像处理还是要用到旋转角度识别算法
 img_rotated=rotate(img,angle_guess,None)
 cv2.namedWindow('carbon_rotated',cv2.WINDOW_NORMAL)#创建窗口
 cv2.imshow('carbon_rotated',img_rotated)#显示二值化处理后的图像
 
+#软X射线经过衍射光栅进行分光，从而形成谱图
+#软X射线的波段：1.0nm到30.0纳米
+#平场光谱仪实际上是通过时间尺度的扫描来得到不同波长的强度
+#也就是说，之前所说的横轴是时间尺度从实际意义上来说没错，但是真正的物理意义仍然是波长，
+#或者说是频率
 
 #窗口管理
 k=cv2.waitKey(0)# 0代表无限等待键盘输入
